@@ -1,0 +1,7 @@
+{% extends 'home.html' %}
+{% block answer %}
+{% set image_loc = "files/" + image_path %}
+<img src="{{ url_for('static', filename=image_loc) }}" style="display: block; margin: auto;">
+<p>The number is: {{ result }}</p>
+
+{% endblock %}

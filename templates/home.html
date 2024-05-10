@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Handwritten Digit Recognizer</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<h1>
+    Handwritten Digit Recognizer
+</h1>
+<h3>
+    This is a handwritten digit recognizer!! Please insert a png image of a number.
+</h3>
+<body>
+    <form class="form1" method='POST' enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+        {{form.file()}}
+        {{form.submit()}}
+    </form>
+    {% block answer %}
+    {% endblock %}
+</body>
+</html>
